@@ -1,0 +1,32 @@
+ {{! Formulario para registrarse}}
+
+ <div class="row">
+     <div class="col-md-4 mx-auto"> {{!el formulario esta dentro de una tarjeta y tendra una columna de 4 y centrado}}
+         <div class="card"> {{! Tarjeta }}
+             <div class="card-header"> {{! Coloca titulo }}
+                 Registrarse
+             </div>
+             <div class="card-body"> {{! coloca formulario }}
+                 <form action="/users/signup" method="post"> {{! El formulario apunta a /users/signup con el metodo post }}
+                     <div class="form-group">
+                         <input type="text" class="form-control" name="name" placeholder="Nombre" value="{{name}}"> {{! Pide el nombre al usuario }}
+                     </div>
+                     <div class="form-group">
+                         <input type="email" class="form-control" name="email" placeholder="Correo Electronico" value="{{email}}"> {{! Pide el correo al usuario }}
+                     </div>
+                     <div class="form-group">
+                         <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}"> {{! Pide la contraseña al usuario }}
+                     </div>
+                     <div class="form-group">
+                         <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar Contraseña" value="{{confirm_password}}"> {{! Pide confirmar contraseña al usuario }}
+                     </div>
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-primary btn-block"> {{! Boton para registrar al usuario }}
+                             Registrarse
+                         </button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>

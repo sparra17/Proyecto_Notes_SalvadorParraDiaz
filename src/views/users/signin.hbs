@@ -1,0 +1,27 @@
+ {{! FORMULARIO DE INGRESO}}
+
+<div class="row"> {{! Fila }}
+    <div class="col-md-4 mx-auto"> {{! columna de centrada  }}
+        <div class="card mt-4 text-center"> {{! tarjeta con un margen de  }}
+            <div class="card-header">
+                <h1>Iniciar Sesion</h1> {{! Titulo de la tarjeta }}
+            </div>
+            <img src="/img/LOGO.png" class="rounded-circle mx-auto d-block m-4 logo" alt="Logo"> {{! logo de la pagina }}
+            <div class="card-body">
+                <form action="/users/signin" method="POST"> {{!el formulario va a enviara signin a travez del metodo post}}
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Correo Electronico" autofocus> {{! Campo para ingresar el correo }}
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña"> {{! campo para ingresar la contraseña  }}
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> {{! boton para ejecutar el formulario e iniciar sesion }}
+                            Iniciar Sesion
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

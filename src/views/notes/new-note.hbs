@@ -1,0 +1,24 @@
+{{! Formulario para agregar una nueva nota}}
+
+<div class="col-md-4 mx-auto"> {{! Se coloca dentro de una columna y centrado}}
+    <div class="card"> {{! Tarjeta }}
+        <div class="card-header">
+            <h3>Nueva Nota</h3> {{! Titulo}}
+            </div>
+            <div class="card-body">
+                <form action="/notes/new-note" method="POST"> {{!Cuando un usuario inserte los datos, aqui se va a enviar la peticion}}
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Titulo" autofocus> {{! Titulo de la nota}}
+                </div>
+                <div class="form-group">
+                    <textarea name="description" class="form-control" placeholder="Descripcion"></textarea> {{! Descripcion de la nota}}
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit"> {{! Boton para guardar}}
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

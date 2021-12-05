@@ -1,0 +1,22 @@
+version: '3'
+#Srrvivios a necesitar
+services:
+  app:
+    container_name: contenedornode
+    restart: always
+    build: .
+    ports:
+      - "5000:3000"
+
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+
+  mongo:
+    container_name: contenedormongodb
+    image: mongo
+    ports: 
+    - "27018:27017"
+    logging:
+      driver: none

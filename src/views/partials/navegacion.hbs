@@ -1,0 +1,42 @@
+{{! Plantilla de navegacion }}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> {{! color de fondo de la navegaciom }}
+  <div class="container"> {{!  }}
+      <a class="navbar-brand" href="/">Notes App</a> {{! Titulo de la navegacion }}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> {{! redirecciona a la pagina inicial }}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a> {{! redirecciona a /about }}
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto"> {{! Coloca las pestañas a la derecha }}
+      {{#if user}} {{! si el usuario existe, si esta autenticado mustra las instrucciones siguientes }}
+      </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          NOTES {{! nombre del dropdows }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/notes">Todas Las Notas</a> {{! muestra ruta /notes que muestra todas las notas }}
+          <a class="dropdown-item" href="/notes/add">Agregar Nota</a> {{! muestra ruta /notes/add para agragar una nueva nota }}
+          <div class="dropdown-divider"></div> {{! linea divisora }}
+          <a class="dropdown-item" href="/users/logout">Salir</a> {{! muestra boton logout para salir de la pagina }}
+        </div>
+      </li>
+      {{else}} {{! Si el usuario no esta autenticado mostrar solo las opciones de ingresar o registrarse }}
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/signin">Iniciar Sesion</a> {{! muestra ruta /users/signin para iniciar sesion con un usuario }}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/users/signup">Registrarse</a> {{! muestra ruta /users/signup para registrar un usuario }}
+      {{/if}}
+    </ul>
+  </div>
+  </div>
+</nav>
