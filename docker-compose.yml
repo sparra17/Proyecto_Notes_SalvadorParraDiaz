@@ -2,7 +2,7 @@ version: '3'
 #Srrvivios a necesitar
 services:
   app:
-    container_name: contenedornode
+    container_name: containernode
     restart: always
     build: .
     ports:
@@ -14,7 +14,7 @@ services:
       - .:/usr/src/app
 
   mongo:
-    container_name: contenedormongodb
+    container_name: containermongodb
     image: mongo
     ports: 
     - "27018:27017"

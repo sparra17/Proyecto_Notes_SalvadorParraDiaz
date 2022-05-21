@@ -13,16 +13,24 @@
     "@handlebars/allow-prototype-access": "^1.0.5",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^6.0.1",
-    "express-session": "^1.17.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
     "method-override": "^3.0.0",
-    "mongoose": "^6.0.13",
-    "passport": "^0.5.0",
+    "mongoose": "^6.3.4",
+    "passport": "^0.5.3",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
   },
-  "description": ""
+  "description": "/// ver contenido de la base de datos por consola",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparra17/Proyecto_Notes_SalvadorParraDiaz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sparra17/Proyecto_Notes_SalvadorParraDiaz/issues"
+  },
+  "homepage": "https://github.com/sparra17/Proyecto_Notes_SalvadorParraDiaz#readme"
 }
