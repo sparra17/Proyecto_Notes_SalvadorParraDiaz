@@ -9,6 +9,7 @@
                         {{title}} {{!<a href="/notes/edit/{{_id}}{{!"><i class="fas fa-edit"></i></a>}} {{! Titulo de la nota }}
                     </h4>
                     <p>{{description}}</p> {{! descripcion de la anota }}
+                    <p>{{date}}</p> {{! descripcion de la anota }}
                     <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST"> {{! Envia a la ruta /notes/delete/_id a travez del metodo POST}}
                       <input type="hidden" name="_method" value="DELETE"> {{! input de tipo oculto}}
                         <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button> {{! Boton para eliminar nota }}

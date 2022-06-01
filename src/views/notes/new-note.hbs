@@ -1,18 +1,38 @@
 {{! Formulario para agregar una nueva nota}}
 
-<div class="col-md-4 mx-auto"> {{! Se coloca dentro de una columna y centrado}}
+<div class="col-md-10 mx-auto"> {{! Se coloca dentro de una columna y centrado}}
     <div class="card"> {{! Tarjeta }}
         <div class="card-header">
-            <h3>Nueva Nota</h3> {{! Titulo}}
+            <h3>Nueva Cita</h3> {{! Titulo}}
             </div>
             <div class="card-body">
                 <form action="/notes/new-note" method="POST"> {{!Cuando un usuario inserte los datos, aqui se va a enviar la peticion}}
                 <div class="form-group">
-                    <input type="text" name="title" class="form-control" placeholder="Titulo" autofocus> {{! Titulo de la nota}}
+                    <input type="text" name="title" class="form-control" placeholder="Nombre del cliente" autofocus> {{! Titulo de la nota}}
                 </div>
-                <div class="form-group">
-                    <textarea name="description" class="form-control" placeholder="Descripcion"></textarea> {{! Descripcion de la nota}}
+
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <label class="input-group-text" for="description">Servicio</label>
                 </div>
+                <select class="custom-select" name="description">
+                  <option selected>Elegir...</option>
+                  <option value="Corte Adulto">Corte Adulto</option>
+                  <option value="Corte Niño">Corte Niño</option>
+                  <option value="Barba">Barba</option>
+                 <option value="Cejas">Cejas</option>
+                 <option value="Limpieza Facial">Limpieza Facial</option>
+                 <option value="Corte + Barba + Ceja">Corte + Barba + Ceja</option>
+                 <option value="Facial + Corte">Facial + Corte</option>
+                 <option value="Facial + Corte + Barba">Facial + Corte + Barba</option>
+                 <option value="Corte + Facial + Barba + Cejas">Corte + Facial + Barba + Cejas</option>
+                 </select>
+                </div>
+
+                <input type="datetime-local" name="date" id="date">
+
+                
+
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit"> {{! Boton para guardar}}
                         Guardar
@@ -22,3 +42,4 @@
         </div>
     </div>
 </div>
+
